@@ -7,7 +7,7 @@ from io import StringIO
 import json
 from pathlib import Path
 
-lst = read_csv_rows("data/sample.csv")
+lst = read_csv_rows(r"C:\Users\HP\Desktop\SDAIA_BOOTCAMP\csv-profiler\src\data\sample.csv")
 st.title("Hello Serry this is the title Wallah am not cheating")
 st.set_page_config(page_title="CSV Profiler", layout="wide")
 st.caption("This is my caption  and i just wana say Serry am not cheating")
@@ -43,7 +43,8 @@ if uploaded is not None:
 
     if preview:
         st.subheader("Preview")
-        st.write(rows[:5])
+        if st.button("Press"):
+            st.write(rows[:5])
     else:
         st.info("Serry Upload a CSV to begin and use mouse.")
 
@@ -64,6 +65,7 @@ if uploaded is not None:
         md_file = report_name + ".md"
         md_text = render_markdown(report)
         c1, c2 = st.columns(2)
+        st.write(md_text)
 
         if st.button("Save to outputs/"):
             c1.download_button("Download JSON", data=json_text, file_name=json_file)
@@ -82,7 +84,7 @@ if uploaded is not None:
 
 # if st.button("show it as markdown"):
 #     report =st.session_state["report"]
-#     st.markdown(render_markdown(report))
+#     
 
 
 
