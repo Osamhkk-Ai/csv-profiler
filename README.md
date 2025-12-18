@@ -2,6 +2,7 @@
 Generate a profiling report for a CSV file.
 ## Features- CLI: JSON + Markdown report- Streamlit GUI: upload CSV + export reports
 ## Setup
+cd .\csv-profiler\
 uv venv -p 3.11
 uv pip install -r requirements.txt
 
