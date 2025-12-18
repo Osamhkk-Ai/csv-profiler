@@ -8,8 +8,8 @@ uv pip install -r requirements.txt
 # If you have a src/ folder:
 #   Mac/Linux: export PYTHONPATH=src
 #   Windows:   $env:PYTHONPATH="src"
+uv run python -m csv_profiler.cli data/sample.csv --out-dir outputs
 ## Run GUI
-uv run python -m csv_profiler.cli profile data/sample.csv --out-dir outputs
 # If you have a src/ folder:
 #   Mac/Linux: export PYTHONPATH=src
 #   Windows:   $env:PYTHONPATH="src"
@@ -17,3 +17,8 @@ uv run streamlit run app.py
 ## Output Files
 The CLI writes:- `outputs/report.json`- `outputs/report.md`
 The Streamlit app can:- preview the report- download JSON + Markdown
+
+## Screenshot
+![alt text](assets/image.png)
+![alt text](assets/image1.png)
+![alt text](assets/image2.png)

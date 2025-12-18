@@ -64,10 +64,10 @@ if uploaded is not None:
         json_text = json.dumps(report, indent=2, ensure_ascii=False)
         md_file = report_name + ".md"
         md_text = render_markdown(report)
-        c1, c2 = st.columns(2)
         st.write(md_text)
 
         if st.button("Save to outputs/"):
+            c1, c2 = st.columns(2)
             c1.download_button("Download JSON", data=json_text, file_name=json_file)
             c2.download_button("Download Markdown", data=md_text, file_name=md_file)
             out_dir = Path("outputs")
