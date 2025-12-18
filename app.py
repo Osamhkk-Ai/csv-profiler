@@ -1,13 +1,13 @@
 import streamlit as st
-from csv_profiler.io import read_csv_rows
-from csv_profiler.profile import basic_profile
-from csv_profiler.render import render_markdown
+from src.csv_profiler.io import read_csv_rows
+from src.csv_profiler.profile import basic_profile
+from src.csv_profiler.render import render_markdown
 import csv
 from io import StringIO
 import json
 from pathlib import Path
 
-lst = read_csv_rows(r"C:\Users\HP\Desktop\SDAIA_BOOTCAMP\csv-profiler\src\data\sample.csv")
+# lst = read_csv_rows(r"C:\Users\HP\Desktop\SDAIA_BOOTCAMP\csv-profiler\src\data\sample.csv")
 st.title("Hello Serry this is the title Wallah am not cheating")
 st.set_page_config(page_title="CSV Profiler", layout="wide")
 st.caption("This is my caption  and i just wana say Serry am not cheating")
